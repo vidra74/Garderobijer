@@ -1,0 +1,29 @@
+object FrmMain: TFrmMain
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object lblNaslov: TLabel
+    StyledSettings = [Size, Style, FontColor]
+    Position.Y = 88.000000000000000000
+    Size.Width = 641.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Family = 'Verdana'
+    TextSettings.HorzAlign = Center
+    Text = 'Garderobijer'
+    TabOrder = 0
+  end
+  object btnZatvori: TButton
+    Position.X = 280.000000000000000000
+    Position.Y = 224.000000000000000000
+    TabOrder = 2
+    Text = 'Zatvori'
+    OnClick = btnZatvoriClick
+  end
+end
