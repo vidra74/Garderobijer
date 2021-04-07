@@ -263,6 +263,9 @@
             <Form>FrmMain</Form>
             <FormType>fmx</FormType>
         </DCCReference>
+        <DCCReference Include="CCR\CCR.PrefsIniFile.Android.pas"/>
+        <DCCReference Include="CCR\CCR.PrefsIniFile.Apple.pas"/>
+        <DCCReference Include="CCR\CCR.PrefsIniFile.pas"/>
         <None Include="..\README.md"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
@@ -413,6 +416,12 @@
                 <DeployFile LocalName="$(BDS)\bin\Artwork\Android\FM_SplashImage_470x320.png" Configuration="Debug" Class="Android_SplashImage470">
                     <Platform Name="Android">
                         <RemoteName>splash_image.png</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="..\README.md" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>

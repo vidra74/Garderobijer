@@ -7,6 +7,8 @@ object FrmMain: TFrmMain
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
+  OnDestroy = FormDestroy
+  OnShow = FormShow
   DesignerMasterStyle = 0
   object lblNaslov: TLabel
     StyledSettings = [Size, Style, FontColor]
@@ -25,5 +27,17 @@ object FrmMain: TFrmMain
     TabOrder = 2
     Text = 'Zatvori'
     OnClick = btnZatvoriClick
+  end
+  object lblBrojPokretanja: TLabel
+    Position.X = 176.000000000000000000
+    Position.Y = 136.000000000000000000
+    Text = 'lblBrojPokretanja'
+    TabOrder = 3
+  end
+  object edtBrojPokretanja: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 4
+    Position.X = 336.000000000000000000
+    Position.Y = 136.000000000000000000
   end
 end
