@@ -10,9 +10,9 @@ uses
 type
   TFrmMain = class(TForm)
     lblNaslov: TLabel;
-    btnZatvori: TButton;
     lblBrojPokretanja: TLabel;
     edtBrojPokretanja: TEdit;
+    sbZatvori: TSpeedButton;
     procedure btnZatvoriClick(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure FormShow(Sender: TObject);

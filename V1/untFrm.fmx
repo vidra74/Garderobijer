@@ -9,35 +9,40 @@ object FrmMain: TFrmMain
   FormFactor.Devices = [Desktop]
   OnDestroy = FormDestroy
   OnShow = FormShow
-  DesignerMasterStyle = 0
+  DesignerMasterStyle = 3
   object lblNaslov: TLabel
     StyledSettings = [Size, Style, FontColor]
-    Position.Y = 88.000000000000000000
+    Position.Y = 72.000000000000000000
     Size.Width = 641.000000000000000000
-    Size.Height = 17.000000000000000000
+    Size.Height = 33.000000000000000000
     Size.PlatformDefault = False
     TextSettings.Font.Family = 'Verdana'
     TextSettings.HorzAlign = Center
     Text = 'Garderobijer'
     TabOrder = 0
   end
-  object btnZatvori: TButton
-    Position.X = 280.000000000000000000
-    Position.Y = 224.000000000000000000
-    TabOrder = 2
-    Text = 'Zatvori'
-    OnClick = btnZatvoriClick
-  end
   object lblBrojPokretanja: TLabel
-    Position.X = 176.000000000000000000
+    Position.X = 72.000000000000000000
     Position.Y = 136.000000000000000000
-    Text = 'lblBrojPokretanja'
-    TabOrder = 3
+    Size.Width = 186.000000000000000000
+    Size.Height = 23.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Broj Pokretanja:'
+    TabOrder = 2
   end
   object edtBrojPokretanja: TEdit
     Touch.InteractiveGestures = [LongTap, DoubleTap]
-    TabOrder = 4
-    Position.X = 336.000000000000000000
+    TabOrder = 3
+    Position.X = 264.000000000000000000
     Position.Y = 136.000000000000000000
+    Size.Width = 169.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object sbZatvori: TSpeedButton
+    Position.X = 280.000000000000000000
+    Position.Y = 216.000000000000000000
+    Text = 'Zatvori'
+    OnClick = btnZatvoriClick
   end
 end
