@@ -2,47 +2,140 @@ object FrmMain: TFrmMain
   Left = 0
   Top = 0
   Caption = 'Garderobijer'
-  ClientHeight = 480
-  ClientWidth = 640
-  FormFactor.Width = 320
-  FormFactor.Height = 480
+  ClientHeight = 567
+  ClientWidth = 384
+  FormFactor.Width = 1440
+  FormFactor.Height = 900
   FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  DesignerMasterStyle = 3
-  object lblNaslov: TLabel
-    StyledSettings = [Size, Style, FontColor]
-    Position.Y = 72.000000000000000000
-    Size.Width = 641.000000000000000000
-    Size.Height = 33.000000000000000000
+  DesignerMasterStyle = 0
+  object HeaderToolBar: TToolBar
+    Anchors = []
+    Size.Width = 384.000000000000000000
+    Size.Height = 48.000000000000000000
     Size.PlatformDefault = False
-    TextSettings.Font.Family = 'Verdana'
-    TextSettings.HorzAlign = Center
-    Text = 'Garderobijer'
     TabOrder = 0
+    object ToolBarLabel: TLabel
+      Align = Contents
+      Size.Width = 384.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'toollabel'
+      TextSettings.HorzAlign = Center
+      Text = 'Garderobijer'
+    end
   end
-  object lblBrojPokretanja: TLabel
-    Position.X = 72.000000000000000000
-    Position.Y = 136.000000000000000000
-    Size.Width = 186.000000000000000000
-    Size.Height = 23.000000000000000000
+  object TabControl1: TTabControl
+    Align = Client
+    FullSize = True
+    Size.Width = 384.000000000000000000
+    Size.Height = 519.000000000000000000
     Size.PlatformDefault = False
-    Text = 'Broj Pokretanja:'
-    TabOrder = 2
+    TabHeight = 49.000000000000000000
+    TabIndex = 3
+    TabOrder = 1
+    TabPosition = PlatformDefault
+    Sizes = (
+      384s
+      470s
+      384s
+      470s
+      384s
+      470s
+      384s
+      470s)
+    object TabItem1: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 95.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'tabitemtoprated'
+      TabOrder = 0
+      Text = 'Veli'#269'ine'
+      ExplicitSize.cx = 50.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+    end
+    object TabItem2: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 95.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'tabitemcontacts'
+      TabOrder = 0
+      Text = 'Stanje'
+      ExplicitSize.cx = 50.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+    end
+    object TabItem3: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 95.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'tabitemrecent'
+      TabOrder = 0
+      Text = 'Nabava'
+      ExplicitSize.cx = 50.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+    end
+    object TabItem4: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 97.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'tabitemmostrecent'
+      TabOrder = 0
+      Text = 'Opcije'
+      ExplicitSize.cx = 50.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      object lblBrojPokretanja: TLabel
+        Position.X = 8.000000000000000000
+        Position.Y = 40.000000000000000000
+        Size.Width = 186.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Broj Pokretanja:'
+        TabOrder = 2
+      end
+      object edtBrojPokretanja: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = [akLeft, akTop, akRight]
+        TabOrder = 3
+        Position.X = 200.000000000000000000
+        Position.Y = 40.000000000000000000
+        Size.Width = 169.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
   end
-  object edtBrojPokretanja: TEdit
-    Touch.InteractiveGestures = [LongTap, DoubleTap]
-    TabOrder = 3
-    Position.X = 264.000000000000000000
-    Position.Y = 136.000000000000000000
-    Size.Width = 169.000000000000000000
-    Size.Height = 32.000000000000000000
-    Size.PlatformDefault = False
-  end
-  object sbZatvori: TSpeedButton
-    Position.X = 280.000000000000000000
-    Position.Y = 216.000000000000000000
-    Text = 'Zatvori'
-    OnClick = btnZatvoriClick
+  object GestureManager1: TGestureManager
+    Sensitivity = 80.000000000000000000
+    Left = 352
+    Top = 56
+    GestureData = <
+      item
+        Control = Owner
+        Collection = <
+          item
+            GestureID = sgiLeft
+          end
+          item
+            GestureID = sgiRight
+          end>
+      end>
   end
 end
